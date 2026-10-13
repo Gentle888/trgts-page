@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>targets — целимся</title>
+<meta name="description" content="targets.agency — скоро.">
+<meta name="theme-color" content="#FF4200">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Sora:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FF4200;--fg:#F4EEEE;--ink:#050505}
+*{margin:0;box-sizing:border-box}
+html,body{height:100%;background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;overflow:hidden}
+::selection{background:var(--fg);color:var(--bg)}
+#stage{position:fixed;inset:0;cursor:grab;touch-action:none}
+#stage:active{cursor:grabbing}
+.logo{position:fixed;top:clamp(20px,4vw,48px);left:clamp(20px,4vw,48px);width:clamp(112px,12vw,168px);height:auto;pointer-events:none}
+h1{position:fixed;left:0;right:0;bottom:clamp(40px,10vh,104px);text-align:center;font-weight:700;font-size:clamp(2rem,6vw,4.5rem);letter-spacing:-.035em;line-height:1;pointer-events:none}
+.dots{display:inline-flex;height:1em;overflow:hidden;vertical-align:bottom}
+.dots i{font-style:normal;display:inline-block;animation:roll 1.8s cubic-bezier(.16,1,.3,1) infinite}
+.dots i:nth-child(2){animation-delay:.15s}
+.dots i:nth-child(3){animation-delay:.3s}
+@keyframes roll{0%{transform:translateY(100%)}25%,70%{transform:translateY(0)}100%{transform:translateY(-100%)}}
+@media (prefers-reduced-motion:reduce){.dots i{animation:none}}
+noscript{position:fixed;inset:0;display:grid;place-items:center}
+</style>
+</head>
+<body>
+<canvas id="stage" aria-hidden="true"></canvas>
+<svg class="logo" role="img" aria-label="targets" viewBox="0 0 351 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:affinity="https://www.affinity.studio/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,0,-113)">
+        <g id="white" transform="matrix(1,0,0,1,0,113)">
+            <rect x="0" y="0" width="350.739" height="85.694" style="fill:none;"/>
+            <g transform="matrix(1.340049,0,0,1.340049,-604.447411,-565.769451)">
+                <g transform="matrix(50,0,0,50,524.149599,475.098842)">
+                    <path d="M0.276,0.014C0.214,0.014 0.166,-0.003 0.132,-0.036C0.097,-0.07 0.08,-0.118 0.08,-0.181L0.08,-0.494L0.248,-0.494L0.248,-0.177C0.248,-0.162 0.252,-0.151 0.259,-0.143C0.266,-0.134 0.275,-0.13 0.288,-0.13C0.301,-0.13 0.311,-0.134 0.317,-0.143C0.323,-0.151 0.326,-0.162 0.326,-0.177L0.454,-0.177C0.454,-0.118 0.44,-0.072 0.413,-0.037C0.385,-0.003 0.339,0.014 0.276,0.014ZM0.002,-0.42L0.002,-0.552L0.44,-0.552L0.44,-0.42L0.002,-0.42ZM0.08,-0.502L0.08,-0.704L0.248,-0.704L0.248,-0.502L0.08,-0.502Z" style="fill:rgb(244,238,238);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(50,0,0,50,524.149599,475.098842)">
+                </g>
+                <text x="547.35px" y="475.099px" style="font-family:'Sora';font-weight:800;font-size:50px;fill:rgb(244,238,238);"><tspan x="547.35px 577.35px 598.45px " y="475.099px 475.099px 475.099px ">arg</tspan>et<tspan x="685.95px " y="475.099px ">s</tspan></text>
+            </g>
+            <g transform="matrix(1.109375,0,0,1.109375,-244.0625,-430.4375)">
+                <path d="M251,423.704C251,422.987 250.715,422.299 250.208,421.792C249.701,421.285 249.013,421 248.296,421L220,421L220,388L253,388L253,416.296C253,417.013 253.285,417.701 253.792,418.208C254.299,418.715 254.987,419 255.704,419L284,419L284,452L251,452L251,423.704ZM267.5,425C261.705,425 257,429.705 257,435.5C257,441.295 261.705,446 267.5,446C273.295,446 278,441.295 278,435.5C278,429.705 273.295,425 267.5,425ZM267.5,430.25C270.398,430.25 272.75,432.602 272.75,435.5C272.75,438.398 270.398,440.75 267.5,440.75C264.602,440.75 262.25,438.398 262.25,435.5C262.25,432.602 264.602,430.25 267.5,430.25ZM236.5,394C230.705,394 226,398.705 226,404.5C226,410.295 230.705,415 236.5,415C242.295,415 247,410.295 247,404.5C247,398.705 242.295,394 236.5,394ZM236.5,399.25C239.398,399.25 241.75,401.602 241.75,404.5C241.75,407.398 239.398,409.75 236.5,409.75C233.602,409.75 231.25,407.398 231.25,404.5C231.25,401.602 233.602,399.25 236.5,399.25Z" style="fill:rgb(244,238,238);"/>
+            </g>
+        </g>
+    </g>
+</svg>
+
+<h1>Целимся<span class="dots" aria-hidden="true"><i>.</i><i>.</i><i>.</i></span></h1>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {SVGLoader} from 'three/addons/loaders/SVGLoader.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+
+const D='M251,423.704C251,422.987 250.715,422.299 250.208,421.792C249.701,421.285 249.013,421 248.296,421L220,421L220,388L253,388L253,416.296C253,417.013 253.285,417.701 253.792,418.208C254.299,418.715 254.987,419 255.704,419L284,419L284,452L251,452L251,423.704ZM267.5,425C261.705,425 257,429.705 257,435.5C257,441.295 261.705,446 267.5,446C273.295,446 278,441.295 278,435.5C278,429.705 273.295,425 267.5,425ZM267.5,430.25C270.398,430.25 272.75,432.602 272.75,435.5C272.75,438.398 270.398,440.75 267.5,440.75C264.602,440.75 262.25,438.398 262.25,435.5C262.25,432.602 264.602,430.25 267.5,430.25ZM236.5,394C230.705,394 226,398.705 226,404.5C226,410.295 230.705,415 236.5,415C242.295,415 247,410.295 247,404.5C247,398.705 242.295,394 236.5,394ZM236.5,399.25C239.398,399.25 241.75,401.602 241.75,404.5C241.75,407.398 239.398,409.75 236.5,409.75C233.602,409.75 231.25,407.398 231.25,404.5C231.25,401.602 233.602,399.25 236.5,399.25Z';
+const canvas=document.getElementById('stage');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.toneMapping=THREE.ACESFilmicToneMapping;
+const scene=new THREE.Scene();
+scene.environment=new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(),.04).texture;
+const camera=new THREE.PerspectiveCamera(30,1,.1,100);camera.position.z=10;
+const key=new THREE.DirectionalLight(0xffffff,2.2);key.position.set(3,4,6);scene.add(key);
+
+const shapes=new SVGLoader().parse(`<svg><path d="${D}"/></svg>`).paths[0].toShapes(true);
+const geo=new THREE.ExtrudeGeometry(shapes,{depth:9,bevelEnabled:true,bevelThickness:1.2,bevelSize:.8,bevelSegments:6,curveSegments:48});
+geo.center();geo.scale(1/34,-1/34,1/34);geo.computeVertexNormals();
+const mat=new THREE.MeshPhysicalMaterial({color:0xF4EEEE,roughness:.32,metalness:0,clearcoat:.6,clearcoatRoughness:.25});
+const mesh=new THREE.Mesh(geo,mat);
+const pivot=new THREE.Group();pivot.add(mesh);scene.add(pivot);
+
+const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let tx=0,ty=0,spin=0,vel=still?0:.35,drag=null;
+addEventListener('pointermove',e=>{
+  const nx=e.clientX/innerWidth*2-1,ny=e.clientY/innerHeight*2-1;
+  tx=nx*.6;ty=ny*.45;
+  if(drag){vel=(e.clientX-drag)*.9;drag=e.clientX;}
+});
+canvas.addEventListener('pointerdown',e=>{drag=e.clientX;canvas.setPointerCapture(e.pointerId);});
+addEventListener('pointerup',()=>drag=null);
+
+function size(){
+  const w=innerWidth,h=innerHeight;renderer.setSize(w,h,false);camera.aspect=w/h;
+  camera.position.z=w<h?9/(w/h)*.55:10;camera.updateProjectionMatrix();
+}
+addEventListener('resize',size);size();
+
+const clock=new THREE.Clock();
+renderer.setAnimationLoop(()=>{
+  const dt=Math.min(clock.getDelta(),.05);
+  if(!drag) vel+=((still?0:.35)-vel)*(1-Math.exp(-dt*1.5));
+  spin+=vel*dt;
+  pivot.rotation.y+=(spin+tx-pivot.rotation.y)*(1-Math.exp(-dt*6));
+  pivot.rotation.x+=(ty-pivot.rotation.x)*(1-Math.exp(-dt*6));
+  pivot.position.y=.3;
+  renderer.render(scene,camera);
+});
+</script>
+</body>
+</html>
